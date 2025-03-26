@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-cash-register"></i> Kasir Sederhana</h1>
+        
+        <div class="input-section">
+            <input type="text" id="itemName" placeholder="Nama Barang">
+            <input type="number" id="itemPrice" placeholder="Harga">
+            <input type="number" id="itemQty" placeholder="Jumlah" value="1">
+            <button onclick="addItem()"><i class="fas fa-plus"></i> Tambah</button>
+        </div>
+
+        <div class="items-list">
+            <h2>Daftar Belanja</h2>
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="itemsBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-section">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">Rp 0</span>
+            </div>
+            <div class="total-row">
+                <span>Pajak (10%):</span>
+                <span id="tax">Rp 0</span>
+            </div>
+            <div class="total-row total">
+                <span>Total:</span>
+                <span id="total">Rp 0</span>
+            </div>
+            <button onclick="checkout()"><i class="fas fa-receipt"></i> Cetak Struk</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
